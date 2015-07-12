@@ -23,6 +23,7 @@ class PlayfairError(Exception):
 class Playfair(object):
     """Playfair Cipher Class
     Public Api:
+        Playfair(password[, ommision_rule, double_padding, end_padding])
         set_password(password)
         encrypt(text)
         decrypt(text)
@@ -35,8 +36,8 @@ class Playfair(object):
        'Merge I into J',
     ]
 
-    def __init__(self, omission_rule=0, double_padding='X',
-                 end_padding='X', password=''):
+    def __init__(self, password, omission_rule=0, double_padding='X',
+                 end_padding='X'):
         """omission_rule determines which omission rule you want to use
         (go figure). See the list at the beginning of the constructor
         double_padding determines what letter you would like to use to pad
