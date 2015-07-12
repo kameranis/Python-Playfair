@@ -88,7 +88,7 @@ must not be omitted by the omission rule.')
             return letter
         else:
             raise PlayfairError('The omission rule provided has not \
-                                been configured properly.')
+been configured properly.')
 
     def _get_alphabet(self):
         """returns the alphabet used by the cipher
@@ -108,7 +108,7 @@ must not be omitted by the omission rule.')
         and the given password"""
         if self.password is None:
             raise PlayfairError("""No password set. Do not use this function.
-                    Instead use set_password(password)""")
+Instead use set_password(password)""")
         grid = ''
         alphabet = self._get_alphabet()
 
@@ -151,10 +151,10 @@ must not be omitted by the omission rule.')
         """encrypts a digraph using the defined grid"""
         if len(text) != 2:
             raise PlayfairError('The digraph to be encrypted must \
-                                be exactly 2 characters long.')
+be exactly 2 characters long.')
         elif not self._is_upper(text):
             raise PlayfairError('The digraph to be encrypted must contain \
-                                only uppercase letters of the alphabet.')
+only uppercase letters of the alphabet.')
 
         first_letter = text[0]
         second_letter = text[1]
@@ -191,10 +191,10 @@ must not be omitted by the omission rule.')
         """decrypts a digraph using the defined grid"""
         if len(text) != 2:
             raise PlayfairError('The digraph to be encrypted \
-                                must be exactly 2 characters long.')
+must be exactly 2 characters long.')
         elif not self._is_upper(text):
             raise PlayfairError('The digraph to be encrypted must contain \
-                                only uppercase letters of the alphabet.')
+only uppercase letters of the alphabet.')
 
         first_encrypted = text[0]
         second_encrypted = text[1]
